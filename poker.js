@@ -37,6 +37,16 @@ function calculerPoints(cartes) {
         }
     }
 
+    const premiereEnseigne = cartes[0].enseigne;
+
+    const estCouleur = cartes.every(function (carte) {
+        return carte.enseigne === premiereEnseigne;
+    });
+
+    if (estCouleur) {
+        return 45;
+    }
+
     return maximum;
 
 }

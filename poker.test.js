@@ -71,3 +71,17 @@ test("full", function () {
 
     assert.equal(resultat, 50);
 });
+
+test("couleur", function () {
+    const cartes = [
+        { valeur: 2, enseigne: "coeur" },
+        { valeur: 5, enseigne: "coeur" },
+        { valeur: 7, enseigne: "coeur" },
+        { valeur: 9, enseigne: "coeur" },
+        { valeur: 13, enseigne: "coeur" }
+    ];
+
+    const resultat = calculerPoints(cartes);
+
+    assert.equal(resultat, 45);
+});
