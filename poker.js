@@ -27,6 +27,16 @@ function calculerPoints(cartes) {
         }
     }
 
+    for (const nombre of Object.values(estBrelan)) {
+        if (nombre === 4) {
+            return 60;
+        }
+
+        if (nombre === 3) {
+            return 30;
+        }
+    }
+
     return maximum;
 
 }

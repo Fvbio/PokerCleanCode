@@ -43,3 +43,17 @@ test("brelan", function () {
 
   assert.equal(resultat, 30);
 });
+
+test("carre", function () {
+    const cartes = [
+        { valeur: 2, enseigne: "coeur" },
+        { valeur: 2, enseigne: "pique" },
+        { valeur: 2, enseigne: "carreau" },
+        { valeur: 2, enseigne: "trefle" },
+        { valeur: 13, enseigne: "coeur" }
+    ];
+
+    const resultat = calculerPoints(cartes);
+
+    assert.equal(resultat, 60);
+});
