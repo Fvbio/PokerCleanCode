@@ -8,26 +8,27 @@ const cartes = [
 
 function calculerPoints(cartes) {
     let maximum = 0;
-    const estBrelan = {};
+    const compteursParValeur = {};
 
     for (const carte of cartes) {
 
         const valeur = carte.valeur;
 
-        estBrelan[valeur] = (estBrelan[valeur] || 0) + 1;
+        compteursParValeur[valeur] = (compteursParValeur[valeur] || 0) + 1;
 
         if (carte.valeur > maximum) {
             maximum = carte.valeur;
         }
     }
 
-    for (const nombre of Object.values(estBrelan)) {
+    
+    for (const nombre of Object.values(compteursParValeur)) {
         if (nombre ===3) {
             return 30;
         }
     }
 
-    for (const nombre of Object.values(estBrelan)) {
+    for (const nombre of Object.values(compteursParValeur)) {
         if (nombre === 4) {
             return 60;
         }
