@@ -7,7 +7,16 @@ const cartes = [
 ]
 
 function calculerPoints(cartes) {
-      return 13;
+    let maximum = 0;
+
+    for (const carte of cartes) {
+        if (carte.valeur > maximum) {
+        maximum = carte.valeur;
+        }
+    }
+
+    return maximum;
+
 }
 
 module.exports = { calculerPoints };
