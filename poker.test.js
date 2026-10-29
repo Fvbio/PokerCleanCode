@@ -29,3 +29,17 @@ test("carte haute as", function () {
 
   assert.equal(resultat, 14);
 });
+
+test("brelan", function () {
+  const cartes = [
+    { valeur: 2, enseigne: "coeur" },
+    { valeur: 2, enseigne: "pique" },
+    { valeur: 2, enseigne: "carreau" },
+    { valeur: 9, enseigne: "trefle" },
+    { valeur: 13, enseigne: "coeur" }
+  ];
+
+  const resultat = calculerPoints(cartes);
+
+  assert.equal(resultat, 30);
+});
