@@ -21,11 +21,10 @@ function calculerPoints(cartes) {
         }
     }
 
-    
-    for (const nombre of Object.values(compteursParValeur)) {
-        if (nombre ===3) {
-            return 30;
-        }
+    const compteurs = Object.values(compteursParValeur);
+
+    if (compteurs.includes(3) && compteurs.includes(2)) {
+        return 50;
     }
 
     for (const nombre of Object.values(compteursParValeur)) {

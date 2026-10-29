@@ -57,3 +57,17 @@ test("carre", function () {
 
     assert.equal(resultat, 60);
 });
+
+test("full", function () {
+    const cartes = [
+        { valeur: 2, enseigne: "coeur" },
+        { valeur: 2, enseigne: "pique" },
+        { valeur: 2, enseigne: "carreau" },
+        { valeur: 9, enseigne: "trefle" },
+        { valeur: 9, enseigne: "pique" }
+    ];
+
+    const resultat = calculerPoints(cartes);
+
+    assert.equal(resultat, 50);
+});
