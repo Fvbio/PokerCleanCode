@@ -15,3 +15,17 @@ test("carte haute", function () {
 
   assert.equal(resultat, 13);
 });
+
+test("carte haute as", function () {
+  const cartes = [
+    { valeur: 2, enseigne: "coeur" },
+    { valeur: 5, enseigne: "pique" },
+    { valeur: 7, enseigne: "carreau" },
+    { valeur: 9, enseigne: "trefle" },
+    { valeur: 14, enseigne: "coeur" }
+  ];
+
+  const resultat = calculerPoints(cartes);
+
+  assert.equal(resultat, 14);
+});
